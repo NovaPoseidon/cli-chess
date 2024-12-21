@@ -45,3 +45,7 @@ User Manual:
      c. Protect your King and be mindful of potential threats.
 
 Enjoy the game and have fun!
+
+
+Video Demo
+
