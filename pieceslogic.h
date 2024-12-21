@@ -8,10 +8,8 @@ using namespace std;
 
 class Pieces{
 public:
-
-
-    unordered_map <int,char> pieces_map;
-    unordered_map <int,int> pieces_value;
+    static unordered_map<int, char> pieces_map;
+    static unordered_map<int, int> pieces_value;
     Pieces();
 
     bool validate_move(

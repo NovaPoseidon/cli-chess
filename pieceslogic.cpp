@@ -5,41 +5,19 @@
 
 using namespace std;
 
-Pieces::Pieces(){
-    unordered_map <int,char> pieces_map={
-        {0,'.'},
-        {1,'R'},
-        {2,'N'},
-        {3,'B'},
-        {4,'K'},
-        {5,'Q'},
-        {6,'P'},
-        {-1,'r'},
-        {-2,'n'},
-        {-3,'b'},
-        {-4,'k'},
-        {-5,'q'},
-        {-6,'p'}
-    };
+unordered_map<int, char> Pieces::pieces_map = {
+    {0, '.'}, {1, 'R'}, {2, 'N'}, {3, 'B'}, {4, 'K'}, {5, 'Q'}, {6, 'P'},
+    {-1, 'r'}, {-2, 'n'}, {-3, 'b'}, {-4, 'k'}, {-5, 'q'}, {-6, 'p'}
+};
 
-    unordered_map <int,int> pieces_value={
-        {0,0},
-        {1,4},
-        {2,3},
-        {3,3},
-        {4,200},
-        {5,9},
-        {6,1},
-        {-1,4},
-        {-2,3},
-        {-3,3},
-        {-4,200},
-        {-5,9},
-        {-6,1}
-    };
-}
+unordered_map<int, int> Pieces::pieces_value = {
+    {0, 0}, {1, 4}, {2, 3}, {3, 3}, {4, 200}, {5, 9}, {6, 1},
+    {-1, 4}, {-2, 3}, {-3, 3}, {-4, 200}, {-5, 9}, {-6, 1}
+};
 
-bool Pieces:: validate_move(
+Pieces::Pieces() {}
+
+bool Pieces::validate_move(
     int &start_piece, 
     int &end_piece,
     vector<vector<int>> &board, 

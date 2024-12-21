@@ -1,7 +1,7 @@
 #include "player.h"
 #include "pieceslogic.h"
 
-Pieces pieces;
+extern Pieces pieces;
 
 Player::Player(){
     unordered_map<int,int> pieces_value = pieces.pieces_value;
@@ -64,7 +64,7 @@ int Player::make_move(
 
         kill_piece(board[x1][y1],board[x2][y2],board,p1_collec,p2_collec);
         return 1;
-    }
+    }else return 0;
 
     cout<<"~~~~~~~~~~~~~~~~~~~~~"<<endl;
 }

@@ -5,9 +5,9 @@
 using namespace std;
 
 class Player{
+public:
     unordered_map<int,int> pieces_value;
     Player();
-public:
     void swap(int &a, int &b);
     void kill_piece(
         int &start_piece, 

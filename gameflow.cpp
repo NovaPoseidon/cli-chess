@@ -3,7 +3,7 @@
 #include "pieceslogic.h"
 
 
-Display display;
+extern Display display;
 Pieces pieces;
 
 Game::Game(){

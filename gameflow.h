@@ -6,6 +6,7 @@
 using namespace std;
 
 class Game{
+public:
     Game();
     unordered_map <int,char> pieces_map;
     void init(
