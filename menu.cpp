@@ -3,6 +3,7 @@
 #include "gameflow.h"
 #include "m2m.h"
 #include<iostream>
+#include <cstddef>
 using namespace std;
 
 extern Game game;
