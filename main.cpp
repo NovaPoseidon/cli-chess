@@ -4,11 +4,13 @@
 #include "player.h"
 #include "pieceslogic.h"
 #include "menu.h"
+#include "m2m.h"
 using namespace std;
 
 Game game;
 Player player;
 Display display;
+Lan lan;
 Menu menu;
 
 int main(){

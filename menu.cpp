@@ -1,12 +1,14 @@
 #include "menu.h"
 #include "display.h"
 #include "gameflow.h"
+#include "m2m.h"
 #include<iostream>
 using namespace std;
 
 extern Game game;
 extern Player player;
 extern Display display;
+extern Lan lan;
 
 Menu::Menu(){
     int game_mode;
@@ -63,33 +65,8 @@ void Menu::lanmultiplayer(
     int turns,
     string move
 ){
-    while(start){
-        
-        bool p1sturn = turns%2==0;
-        cout<<"Total moves: "<<turns<<endl;
-        if (p1sturn) {
-            cout << "Player 1's turn: ";
-            cin >> move;
-        } else {
-            cout << "Player 2's turn: ";
-            
-            cin>>move;
-        }
-
-        vector<vector<int>> positions = game.move_decoder(move);
-
-        system("cls");
-
-        int move_made = player.make_move(board,positions,p1_collec,p2_collec,p1sturn);
-        if(move_made==0){
-            turns--;
-        }
-        
-        display.update(board,p1_collec,p2_collec);
-
-        turns++;
-        
-    }
+    lan.initiate(board,turns,move,p1_collec,p2_collec);
+    
 }
 void Menu::aiopponent(
     vector<vector<int>> board,
